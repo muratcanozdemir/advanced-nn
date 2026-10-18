@@ -1,0 +1,6 @@
+n0 seed 0: 1,247,744 params, 1953 steps of 32x256
+  step 500/1953 train 4.274 val 3.539 bpc (13,624 bytes/s)
+  step 1000/1953 train 3.374 val 3.134 bpc (13,569 bytes/s)
+  step 1500/1953 train 3.093 val 2.970 bpc (13,351 bytes/s)
+  step 1953/1953 train 3.001 val 2.937 bpc (13,154 bytes/s)
+done: val 2.9976 test 2.9717 bpc

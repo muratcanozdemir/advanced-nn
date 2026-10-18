@@ -1,0 +1,6 @@
+ff-attn seed 0: 3,346,944 params, 1953 steps of 32x256
+  step 500/1953 train 4.260 val 3.529 bpc (5,695 bytes/s)
+  step 1000/1953 train 3.353 val 3.108 bpc (5,695 bytes/s)
+  step 1500/1953 train 3.041 val 2.912 bpc (5,652 bytes/s)
+  step 1953/1953 train 2.940 val 2.878 bpc (5,608 bytes/s)
+done: val 2.9375 test 2.9055 bpc

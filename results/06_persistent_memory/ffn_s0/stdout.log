@@ -1,0 +1,6 @@
+ffn seed 0: 3,346,944 params, 1953 steps of 32x256
+  step 500/1953 train 3.935 val 3.159 bpc (5,590 bytes/s)
+  step 1000/1953 train 2.929 val 2.658 bpc (5,580 bytes/s)
+  step 1500/1953 train 2.598 val 2.443 bpc (5,597 bytes/s)
+  step 1953/1953 train 2.475 val 2.391 bpc (5,613 bytes/s)
+done: val 2.4700 test 2.4347 bpc

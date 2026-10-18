@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+      - run: uvx ruff check --output-format=github .
+      - run: uvx ruff format --check .
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.12", "3.14"]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+          enable-cache: true
+      - run: uv sync --locked
+      - run: uv run pytest -q
+
+  # Each experiment at toy settings: catches run.py scripts broken by changes to memstore.
+  # Experiment 03 (~60 min) and 06 (needs enwik8, hours per arm) are left out.
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --locked
+      - name: Run experiments at toy settings
+        env:
+          OUT: ${{ runner.temp }}/smoke
+        run: |
+          uv run python experiments/01_isr_capacity/run.py --trials 2 --out "$OUT/01_isr_capacity"
+          uv run python experiments/02_write_rules/run.py --trials 2 --out "$OUT/02_write_rules"
+          uv run python experiments/04_bahdanau_vs_dot/run.py --steps 20 --seeds 1 --out "$OUT/04_bahdanau_vs_dot"
+          uv run python experiments/05_induction_depth/run.py --steps 20 --seeds 1 --out "$OUT/05_induction_depth"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: smoke-results
+          path: ${{ runner.temp }}/smoke

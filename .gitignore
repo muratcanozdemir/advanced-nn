@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Environment
+.venv/
+.env
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Datasets (enwik8 etc. are downloaded on demand)
+data/
+
+# Model checkpoints (results/ keeps the small csv/json/png/log outputs)
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store

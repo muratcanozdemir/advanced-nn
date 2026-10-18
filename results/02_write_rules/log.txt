@@ -1,0 +1,25 @@
+1. Capacity: median ISR / nearest-value recall
+    M |            hebbian |       delta beta=1 | delta beta=0.1 x20 |      least squares
+   16 |      0.44 / 100.0% |      0.34 / 100.0% |      0.17 / 100.0% |      0.00 / 100.0%
+   32 |      0.67 / 100.0% |      0.57 /  99.4% |      0.31 / 100.0% |      0.00 / 100.0%
+   64 |      0.96 / 100.0% |      1.09 /  90.2% |      0.55 / 100.0% |      0.00 / 100.0%
+   96 |      1.19 /  99.7% |      1.62 /  69.6% |      0.79 / 100.0% |      0.69 / 100.0%
+  128 |      1.38 /  98.1% |      2.12 /  55.4% |      1.03 / 100.0% |      0.99 / 100.0%
+  192 |      1.70 /  89.4% |      3.64 /  35.4% |      1.40 /  97.4% |      1.40 /  98.4%
+  256 |      1.96 /  75.7% |      5.13 /  26.2% |      1.71 /  85.5% |      1.70 /  88.7%
+  512 |      2.80 /  33.3% |      8.09 /  12.3% |      2.70 /  38.3% |      2.63 /  39.9%
+ 1024 |      3.96 /   9.1% |     10.02 /   6.1% |      4.33 /  13.5% |      3.83 /  10.4%
+
+2. Recency, M = 256: recall by write position (oldest eighth -> newest eighth)
+             hebbian |   76%   78%   76%   75%   79%   72%   72%   72%
+        delta beta=1 |    0%    0%    0%    2%    6%   30%   74%   99%
+  delta beta=0.1 x20 |   68%   74%   80%   84%   89%   91%   95%   96%
+       least squares |   91%   90%   91%   89%   87%   89%   91%   85%
+
+3. Overwrite: 128 pairs, then 32 keys rewritten. Cosine of readout to new / stale value
+             hebbian | new  0.48   stale  0.47
+        delta beta=1 | new  0.80   stale  0.02
+  delta beta=0.1 x20 | new  0.62   stale  0.48
+       least squares | new  0.56   stale  0.56
+
+wrote results/02_write_rules/capacity.csv and write_rules.png

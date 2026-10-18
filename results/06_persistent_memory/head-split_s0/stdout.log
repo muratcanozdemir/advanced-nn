@@ -1,0 +1,6 @@
+head-split seed 0: 3,344,896 params, 1953 steps of 32x256
+  step 500/1953 train 4.319 val 3.579 bpc (5,624 bytes/s)
+  step 1000/1953 train 3.471 val 3.235 bpc (5,710 bytes/s)
+  step 1500/1953 train 3.183 val 3.046 bpc (5,738 bytes/s)
+  step 1953/1953 train 3.082 val 3.013 bpc (5,758 bytes/s)
+done: val 3.0743 test 3.0553 bpc

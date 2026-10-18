@@ -1,0 +1,9 @@
+1 layer(s), seed 0: copy accuracy  18.4%; layer-1 heads' weight on previous position: 0.04, 0.04
+1 layer(s), seed 1: copy accuracy  19.0%; layer-1 heads' weight on previous position: 0.02, 0.02
+1 layer(s), seed 2: copy accuracy  19.1%; layer-1 heads' weight on previous position: 0.04, 0.04
+2 layer(s), seed 0: copy accuracy  96.3%; layer-1 heads' weight on previous position: 0.41, 0.09
+2 layer(s), seed 1: copy accuracy  96.4%; layer-1 heads' weight on previous position: 0.39, 0.26
+2 layer(s), seed 2: copy accuracy  96.6%; layer-1 heads' weight on previous position: 0.06, 0.39
+
+chance accuracy 0.8%
+wrote results/05_induction_depth

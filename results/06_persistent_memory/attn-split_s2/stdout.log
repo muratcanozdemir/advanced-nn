@@ -1,0 +1,6 @@
+attn-split seed 2: 3,344,896 params, 1953 steps of 32x256
+  step 500/1953 train 4.268 val 3.522 bpc (4,980 bytes/s)
+  step 1000/1953 train 3.333 val 3.054 bpc (4,991 bytes/s)
+  step 1500/1953 train 3.004 val 2.874 bpc (4,989 bytes/s)
+  step 1953/1953 train 2.912 val 2.842 bpc (4,989 bytes/s)
+done: val 2.9038 test 2.8798 bpc

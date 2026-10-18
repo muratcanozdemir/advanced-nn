@@ -1,0 +1,37 @@
+[0-7] start ffn seed 0
+[8-15] start ff-attn seed 0
+[8-15] end ff-attn seed 0: exit 0
+[8-15] start all-attn seed 0
+[0-7] end ffn seed 0: exit 0
+[0-7] start attn-split seed 0
+[0-7] end attn-split seed 0: exit 0
+[0-7] start head-split seed 0
+[8-15] end all-attn seed 0: exit 0
+[8-15] start n0 seed 0
+[8-15] end n0 seed 0: exit 0
+[8-15] start ffn seed 1
+[0-7] end head-split seed 0: exit 0
+[0-7] start ff-attn seed 1
+[8-15] end ffn seed 1: exit 0
+[8-15] start all-attn seed 1
+[0-7] end ff-attn seed 1: exit 0
+[0-7] start attn-split seed 1
+[8-15] end all-attn seed 1: exit 0
+[8-15] start head-split seed 1
+[0-7] end attn-split seed 1: exit 0
+[0-7] start n0 seed 1
+[8-15] end head-split seed 1: exit 0
+[8-15] start ffn seed 2
+[0-7] end n0 seed 1: exit 0
+[0-7] start ff-attn seed 2
+[8-15] end ffn seed 2: exit 0
+[8-15] start all-attn seed 2
+[0-7] end ff-attn seed 2: exit 0
+[0-7] start attn-split seed 2
+[0-7] end attn-split seed 2: exit 0
+[0-7] start head-split seed 2
+[8-15] end all-attn seed 2: exit 0
+[8-15] start n0 seed 2
+[8-15] end n0 seed 2: exit 0
+[0-7] end head-split seed 2: exit 0
+batch finished at Sun Oct 18 07:14:59 AM CEST 2026

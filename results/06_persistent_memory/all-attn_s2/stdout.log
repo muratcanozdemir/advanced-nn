@@ -1,0 +1,6 @@
+all-attn seed 2: 3,344,896 params, 1953 steps of 32x256
+  step 500/1953 train 4.450 val 3.687 bpc (4,975 bytes/s)
+  step 1000/1953 train 3.662 val 3.445 bpc (4,963 bytes/s)
+  step 1500/1953 train 3.410 val 3.250 bpc (4,959 bytes/s)
+  step 1953/1953 train 3.302 val 3.214 bpc (4,955 bytes/s)
+done: val 3.2790 test 3.2799 bpc
